@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Tomcat context settings for CampusLoop.
+  sameSiteCookies is supported from Tomcat 8.5.42; older 8.5 releases log a
+  harmless warning and ignore it (CSRF tokens still protect every POST).
+-->
+<Context>
+    <CookieProcessor className="org.apache.tomcat.util.http.Rfc6265CookieProcessor"
+                     sameSiteCookies="lax" />
+</Context>

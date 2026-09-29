@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Gadgets">
+  <rect width="800" height="600" fill="#EEF4F1"/>
+  <circle cx="650" cy="150" r="85" fill="#DDEEE5"/>
+  <ellipse cx="400" cy="485" rx="230" ry="20" fill="#0F1B2D" opacity=".08"/>
+  <rect x="180" y="200" width="250" height="270" rx="30" fill="#0F1B2D"/>
+  <rect x="210" y="236" width="190" height="16" rx="8" fill="#3B4A63"/>
+  <rect x="210" y="236" width="140" height="16" rx="8" fill="#52C996"/>
+  <circle cx="305" cy="360" r="46" fill="none" stroke="#1F9D6B" stroke-width="10"/>
+  <path d="M305 322 v26" stroke="#1F9D6B" stroke-width="10" stroke-linecap="round"/>
+  <rect x="470" y="250" width="170" height="210" rx="16" fill="#1F9D6B"/>
+  <g fill="#0F1B2D" opacity=".35">
+    <rect x="490" y="275" width="40" height="30" rx="4"/><rect x="580" y="275" width="40" height="30" rx="4"/>
+    <rect x="490" y="400" width="130" height="16" rx="4"/>
+  </g>
+  <g fill="#E9A23B"><circle cx="505" cy="345" r="8"/><circle cx="535" cy="345" r="8"/><circle cx="565" cy="345" r="8"/><circle cx="595" cy="345" r="8"/></g>
+  <path d="M430 330 C 455 330, 450 300, 470 300" fill="none" stroke="#3B4A63" stroke-width="8" stroke-linecap="round"/>
+</svg>

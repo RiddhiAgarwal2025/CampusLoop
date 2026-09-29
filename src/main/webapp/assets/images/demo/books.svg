@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Books">
+  <rect width="800" height="600" fill="#EEF4F1"/>
+  <circle cx="620" cy="130" r="90" fill="#DDEEE5"/>
+  <ellipse cx="400" cy="470" rx="230" ry="22" fill="#0F1B2D" opacity=".08"/>
+  <rect x="210" y="380" width="380" height="80" rx="10" fill="#0F1B2D"/>
+  <rect x="222" y="392" width="356" height="12" rx="4" fill="#FFFFFF" opacity=".15"/>
+  <rect x="540" y="380" width="22" height="80" fill="#52C996"/>
+  <rect x="240" y="302" width="340" height="78" rx="10" fill="#1F9D6B"/>
+  <rect x="254" y="316" width="312" height="10" rx="4" fill="#FFFFFF" opacity=".22"/>
+  <rect x="270" y="340" width="150" height="10" rx="4" fill="#FFFFFF" opacity=".55"/>
+  <rect x="226" y="228" width="330" height="74" rx="10" fill="#E9A23B"/>
+  <rect x="240" y="240" width="302" height="10" rx="4" fill="#FFFFFF" opacity=".3"/>
+  <rect x="256" y="262" width="120" height="10" rx="4" fill="#0F1B2D" opacity=".35"/>
+  <path d="M470 120 h70 a8 8 0 0 1 8 8 v100 l-43 -26 l-43 26 v-100 a8 8 0 0 1 8 -8z" fill="#3B4A63"/>
+</svg>

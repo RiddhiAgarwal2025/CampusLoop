@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Calculator">
+  <rect width="800" height="600" fill="#F2F1EC"/>
+  <circle cx="640" cy="460" r="100" fill="#E8E5DA"/>
+  <ellipse cx="400" cy="520" rx="170" ry="18" fill="#0F1B2D" opacity=".08"/>
+  <rect x="270" y="90" width="260" height="410" rx="28" fill="#0F1B2D"/>
+  <rect x="298" y="122" width="204" height="84" rx="10" fill="#D2EFE1"/>
+  <rect x="380" y="170" width="104" height="20" rx="4" fill="#157A52" opacity=".7"/>
+  <g fill="#3B4A63">
+    <rect x="298" y="236" width="42" height="34" rx="8"/><rect x="352" y="236" width="42" height="34" rx="8"/><rect x="406" y="236" width="42" height="34" rx="8"/>
+    <rect x="298" y="284" width="42" height="34" rx="8"/><rect x="352" y="284" width="42" height="34" rx="8"/><rect x="406" y="284" width="42" height="34" rx="8"/>
+    <rect x="298" y="332" width="42" height="34" rx="8"/><rect x="352" y="332" width="42" height="34" rx="8"/><rect x="406" y="332" width="42" height="34" rx="8"/>
+    <rect x="298" y="380" width="42" height="34" rx="8"/><rect x="352" y="380" width="42" height="34" rx="8"/><rect x="406" y="380" width="42" height="34" rx="8"/>
+    <rect x="298" y="428" width="96" height="34" rx="8"/>
+  </g>
+  <rect x="460" y="236" width="42" height="82" rx="8" fill="#E9A23B"/>
+  <rect x="460" y="332" width="42" height="130" rx="8" fill="#1F9D6B"/>
+  <rect x="406" y="428" width="42" height="34" rx="8" fill="#3B4A63"/>
+</svg>

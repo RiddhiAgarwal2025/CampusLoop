@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CampusLoop deployment descriptor (Servlet 3.1 / Apache Tomcat 8.5).
+
+  * Servlets are registered with @WebServlet annotations (metadata-complete="false").
+  * Filters are declared HERE because only web.xml guarantees filter order.
+  * There is deliberately NO servlet mapped to "/" or "/*", so Tomcat's default
+    servlet always serves /assets/** (CSS, JS, images) untouched.
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1"
+         metadata-complete="false">
+
+    <display-name>CampusLoop</display-name>
+    <description>Good Stuff. Second Chances.</description>
+
+    <!-- ===================== FILTERS (order matters) ===================== -->
+
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>com.campusloop.filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>securityHeadersFilter</filter-name>
+        <filter-class>com.campusloop.filter.SecurityHeadersFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>csrfFilter</filter-name>
+        <filter-class>com.campusloop.filter.CsrfFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>authFilter</filter-name>
+        <filter-class>com.campusloop.filter.AuthFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>navContextFilter</filter-name>
+        <filter-class>com.campusloop.filter.NavContextFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>securityHeadersFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>csrfFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <!-- Every route that requires a signed-in student -->
+    <filter-mapping>
+        <filter-name>authFilter</filter-name>
+        <url-pattern>/dashboard</url-pattern>
+        <url-pattern>/sell</url-pattern>
+        <url-pattern>/my-listings</url-pattern>
+        <url-pattern>/edit</url-pattern>
+        <url-pattern>/listing/*</url-pattern>
+        <url-pattern>/checkout</url-pattern>
+        <url-pattern>/exchange</url-pattern>
+        <url-pattern>/exchange/*</url-pattern>
+        <url-pattern>/pay</url-pattern>
+        <url-pattern>/purchases</url-pattern>
+        <url-pattern>/sales</url-pattern>
+        <url-pattern>/wallet</url-pattern>
+        <url-pattern>/review</url-pattern>
+        <url-pattern>/profile</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <!-- Cart badge in the header (after authentication so the student is known) -->
+    <filter-mapping>
+        <filter-name>navContextFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <!-- ===================== SESSION ===================== -->
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <name>JSESSIONID</name>
+            <http-only>true</http-only>
+        </cookie-config>
+        <!-- Never leak the session id into URLs -->
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+    <!-- ===================== JSP ===================== -->
+
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+            <!-- No Java scriptlets anywhere: business logic lives in services -->
+            <scripting-invalid>true</scripting-invalid>
+            <include-prelude>/WEB-INF/views/common/taglibs.jspf</include-prelude>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+    </jsp-config>
+
+    <!-- ===================== ERRORS (no stack traces) ===================== -->
+
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>413</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/WEB-INF/views/error.jsp</location>
+    </error-page>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Stationery">
+  <rect width="800" height="600" fill="#EDF1F7"/>
+  <circle cx="170" cy="460" r="95" fill="#DFE7F2"/>
+  <ellipse cx="400" cy="495" rx="230" ry="20" fill="#0F1B2D" opacity=".08"/>
+  <rect x="230" y="150" width="270" height="330" rx="14" fill="#FFFFFF" stroke="#CFD6E0" stroke-width="4"/>
+  <rect x="230" y="150" width="34" height="330" rx="10" fill="#1F9D6B"/>
+  <g stroke="#CFD6E0" stroke-width="4"><line x1="290" y1="220" x2="470" y2="220"/><line x1="290" y1="260" x2="470" y2="260"/><line x1="290" y1="300" x2="470" y2="300"/><line x1="290" y1="340" x2="430" y2="340"/><line x1="290" y1="380" x2="450" y2="380"/></g>
+  <g transform="rotate(-28 560 300)">
+    <rect x="530" y="120" width="44" height="300" rx="6" fill="#E9A23B"/>
+    <rect x="530" y="120" width="44" height="30" rx="6" fill="#0F1B2D"/>
+    <path d="M530 420 L 552 470 L 574 420 Z" fill="#F4E2C4"/>
+    <path d="M545 455 L 552 470 L 559 455 Z" fill="#0F1B2D"/>
+  </g>
+  <rect x="160" y="110" width="40" height="290" rx="6" fill="#0F1B2D" transform="rotate(12 180 255)"/>
+  <g stroke="#52C996" stroke-width="4" transform="rotate(12 180 255)"><line x1="160" y1="140" x2="178" y2="140"/><line x1="160" y1="180" x2="186" y2="180"/><line x1="160" y1="220" x2="178" y2="220"/><line x1="160" y1="260" x2="186" y2="260"/><line x1="160" y1="300" x2="178" y2="300"/><line x1="160" y1="340" x2="186" y2="340"/></g>
+</svg>
